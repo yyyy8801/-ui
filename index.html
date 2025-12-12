@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>人民角色库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class', // Enable class-based dark mode
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Inter"', '"Noto Sans SC"', 'sans-serif'],
+            },
+            colors: {
+              // High-end dark theme palette
+              dark: {
+                bg: '#050505',
+                surface: '#0a0a0a',
+                border: '#1f1f1f',
+              },
+              primary: {
+                DEFAULT: '#7c3aed', // Violet
+                glow: 'rgba(124, 58, 237, 0.5)',
+              },
+              accent: {
+                DEFAULT: '#f43f5e', // Rose/Red for 18+ or highlights
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        @apply bg-gray-50 text-gray-900 dark:bg-[#050505] dark:text-[#e5e5e5];
+        overflow-x: hidden;
+      }
+      /* Modern Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        @apply bg-gray-300 dark:bg-[#262626] rounded-full;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-400 dark:bg-[#404040];
+      }
+      
+      /* Glass Utilities */
+      .glass-panel {
+        @apply bg-white/60 dark:bg-[#141414]/60 backdrop-blur-xl border border-gray-200 dark:border-white/10;
+      }
+      
+      .glass-sidebar {
+        @apply bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-xl border-r border-gray-200 dark:border-white/5;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
